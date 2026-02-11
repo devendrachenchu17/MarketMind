@@ -1,0 +1,357 @@
+/* Base Design System */
+.campaign-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+}
+
+.campaign-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.campaign-header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Form Styles */
+.campaign-form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #60a5fa;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Results Grid */
+.results-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    align-items: start;
+    /* prevents stretching if heights differ */
+}
+
+/* Generic Card Base */
+.content-card {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Platform Specific Styles */
+
+/* Instagram Card */
+.instagram-card {
+    background: #000;
+    border: 1px solid #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.insta-header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+.insta-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    margin-right: 10px;
+}
+
+.insta-username {
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+
+.insta-media {
+    width: 100%;
+    display: block;
+}
+
+.insta-actions {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.insta-caption {
+    padding: 0 12px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.insta-caption strong {
+    margin-right: 5px;
+}
+
+/* LinkedIn Card */
+.linkedin-card {
+    background: #fff;
+    color: #000;
+    border: 1px solid #e0e0e0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.linkedin-header {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.linkedin-avatar {
+    width: 48px;
+    height: 48px;
+    background: #0a66c2;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 50%;
+    /* LinkedIn avatars are circular */
+    margin-right: 10px;
+}
+
+.linkedin-info h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000e6;
+}
+
+.linkedin-info span {
+    display: block;
+    font-size: 12px;
+    color: #00000099;
+}
+
+.linkedin-content {
+    padding: 0 16px 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000000e6;
+    white-space: pre-wrap;
+}
+
+.linkedin-media {
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.linkedin-actions {
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e0e0e0;
+}
+
+.linkedin-btn {
+    background: none;
+    border: none;
+    padding: 10px 8px;
+    color: #00000099;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.linkedin-btn:hover {
+    background-color: #00000008;
+    border-radius: 4px;
+}
+
+/* Twitter Card */
+.twitter-card {
+    background: #000;
+    border: 1px solid #333;
+    padding: 12px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+    color: #fff;
+}
+
+.twitter-header {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.twitter-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    margin-right: 12px;
+}
+
+.twitter-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.twitter-handle {
+    color: #71767b;
+    font-size: 15px;
+}
+
+.twitter-text {
+    font-size: 15px;
+    line-height: 20px;
+    color: #e7e9ea;
+    white-space: pre-wrap;
+    margin-bottom: 12px;
+}
+
+.twitter-media {
+    border-radius: 16px;
+    border: 1px solid #333;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+/* Poster Card */
+.poster-card {
+    grid-row: span 2;
+    background: #000;
+    border: 8px solid #111;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-media {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.poster-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.poster-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 2rem;
+    color: white;
+}
+
+.poster-headline {
+    font-family: 'Oswald', sans-serif;
+    /* You might want to import this font */
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    color: #fbbf24;
+}
+
+.poster-subhead {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* XAI Box */
+.xai-box {
+    margin: 1rem;
+    padding: 0.75rem;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #a5b4fc;
+}
+
+.xai-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #818cf8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.7rem;
+}
