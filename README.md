@@ -39,8 +39,8 @@ Open your browser and navigate to:
 
 ## ✨ Features
 - **Campaign Generator**: Create platform-specific social media posts with AI reasoning.
-- **Sales Pitch Generator**: (Coming Soon) Generate personalized pitches.
-- **Lead Scoring**: (Coming Soon) AI-driven lead qualification.
+- **Sales Pitch Generator**: Generate personalized pitches.
+- **Lead Scoring**: AI-driven lead qualification.
 
 ## 🔑 Configuration
 Create a `.env` file in the `backend` directory:
